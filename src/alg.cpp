@@ -1,7 +1,6 @@
 // Copyright 2021 NNTU-CS
 #include <string>
 #include "tstack.h"
-
 std::string infx2pstfx(std::string inf) {
   int PrOp(char z){
     if((z == '/')||(z == '*')){return 3;}
