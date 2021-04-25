@@ -85,6 +85,65 @@ return inf3;
 
 
 int eval(std::string pst) {
-  // добавьте сюда нужный код
-  return 0;
+TStack<std::string> stack1;
+int result = 0;    
+std::string temp;
+int i1 = 0;
+int k1;
+int k2;
+
+while(i1 <pst.size()){
+if((PrOp(pst[i1]) == -1)&&(pst[i1+1] == ' ')){
+temp = pst[i1];
+stack1.push(temp);
+i1 += 2;
+} else if((PrOp(pst[i1]) == -1)&&(PrOp(pst[i1+1]) == -1)){
+temp = pst[i1]+pst[i1+1];
+std::cout<<temp<<std::endl;
+stack1.push(temp); 
+i1 +=2;
+} else if(pst[i1] == '+'){
+k1 = 0;
+for(int i2 = 0;i2 < 2; i2++){
+k1 += atoi(stack1.get().c_str());
+stack1.pop();
+}
+temp = std::to_string(k1);
+stack1.push(temp);
+i1 += 2;
+} else if(pst[i1] == '-'){
+k1 = 0;
+k2 = 0;
+k2 = atoi(stack1.get().c_str());
+stack1.pop();
+k1 = atoi(stack1.get().c_str());
+stack1.pop();
+k1 -= k2;
+temp = std::to_string(k1);
+stack1.push(temp);
+i1 += 2;
+} else if(pst[i1] == '*'){
+k1 = 1;
+for(int i2 = 0;i2 < 2; i2++){
+k1 *= atoi(stack1.get().c_str());
+stack1.pop();
+}
+temp = std::to_string(k1);
+stack1.push(temp);
+i1 += 2;
+} else if(pst[i1] == '/'){
+k1 = 0;
+k2 = 0;
+k2 = atoi(stack1.get().c_str());
+stack1.pop();
+k1 = atoi(stack1.get().c_str());
+stack1.pop();
+k1 /= k2;
+temp = std::to_string(k1);
+stack1.push(temp);
+i1 += 2;
+}    
+}
+result = atoi(stack1.get().c_str());
+return result;
 }
