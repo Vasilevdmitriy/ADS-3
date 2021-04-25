@@ -99,7 +99,6 @@ stack1.push(temp);
 i1 += 2;
 } else if((PrOp(pst[i1]) == -1)&&(PrOp(pst[i1+1]) == -1)){
 temp = pst[i1]+pst[i1+1];
-std::cout<<temp<<std::endl;
 stack1.push(temp); 
 i1 +=2;
 } else if(pst[i1] == '+'){
