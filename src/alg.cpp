@@ -1,8 +1,9 @@
 // Copyright 2021 NNTU-CS
 #include <string>
+#include<iostream>
 #include "tstack.h"
 
-int PrOp(char z){
+int PrOp(char z) {
 if((z == '/') || (z == '*')) {return 3;
 } else {if((z == '+') || (z == '-')) {return 2;
 } else {if(z == ')') {return 1;
