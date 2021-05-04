@@ -10,7 +10,7 @@ if((z == '/') || (z == '*')) {return 3;
 } else if (z == '(') {return 0;
 } else {return -1;}
 }
-std::string infx2pstfx(std::string inf, std::string inf2, std::string inf3) {
+std::string infx2pstfx(std::string inf) {
 TStack<char> inf1;
 int i = 0;
 int i1 = 0;
@@ -65,24 +65,27 @@ i++;
 if(temp3 != 0) {
 inf1.push(temp3);
 }
+inf = ' ';
 while(inf1.isEmpty() == false) {
-inf2 += inf1.get();
+inf += inf1.get();
 inf1.pop();
 }
-i1 = inf2.size()-1;
+i1 = inf.size()-1;
 while(i1 > -1) {
-inf3 += inf2[i1];
+inf += inf[i1];
+inf[i1] = NULL;
 if(i1 > 0) {
-inf3 += ' ';
+inf += ' ';
 }
 i1--;
 }
-return inf3;
+return inf;
 }
 
 
-int eval(std::string pst, std::string temp) {
-TStack<std::string> stack1;
+int eval(std::string pst) {
+TStack<char> stack1;
+std::string temp ;
 int result = 0;
 int i1 = 0;
 int k1;
@@ -90,13 +93,12 @@ int k2;
 
 while(i1 <pst.size()) {
 if((PrOp(pst[i1]) == -1) && (pst[i1+1] == ' ')) {
-temp = pst[i1];
-stack1.push(temp);
+stack1.push(pst[i1]);
 i1 += 2;
 } else if ((PrOp(pst[i1]) == -1) && (PrOp(pst[i1+1]) == -1)) {
 temp = pst[i1]+pst[i1+1];
 //std::cout<<temp<<std::endl;
-stack1.push(temp);
+stack1.push();
 i1 +=2;
 } else if (pst[i1] == '+') {
 k1 = 0;
