@@ -19,7 +19,7 @@ std::string inf3;
 char temp = 0;
 char temp2 = 0;
 char temp3 = 0;
-while(i < inf.size()-1){
+while(i < inf.size()-1) {
 if(PrOp(inf[i]) == -1) {
 inf1.push(inf[i]);
 i++;
