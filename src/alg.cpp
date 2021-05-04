@@ -10,12 +10,10 @@ if((z == '/') || (z == '*')) {return 3;
 } else if (z == '(') {return 0;
 } else {return -1;}
 }
-std::string infx2pstfx(std::string inf) {
+std::string infx2pstfx(std::string inf, std::string inf2, std::string inf3) {
 TStack<char> inf1;
 int i = 0;
 int i1 = 0;
-std::string inf2;
-std::string inf3;
 char temp = 0;
 char temp2 = 0;
 char temp3 = 0;
@@ -83,10 +81,9 @@ return inf3;
 }
 
 
-int eval(std::string pst) {
+int eval(std::string pst, std::string temp) {
 TStack<std::string> stack1;
 int result = 0;
-std::string temp;
 int i1 = 0;
 int k1;
 int k2;
