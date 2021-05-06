@@ -84,7 +84,7 @@ return inf;
 
 
 int eval(std::string pst) {
-TStack<char> stack1;
+TStack<std::string> stack1;
 std::string temp ;
 int result = 0;
 int i1 = 0;
