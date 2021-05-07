@@ -65,7 +65,7 @@ i++;
 if(temp3 != 0) {
 inf1.push(temp3);
 }
-inf = ' ';
+inf = " ";
 while(inf1.isEmpty() == false) {
 inf += inf1.get();
 inf1.pop();
@@ -73,7 +73,7 @@ inf1.pop();
 i1 = inf.size()-1;
 while(i1 > -1) {
 inf += inf[i1];
-inf[i1] = " ";
+inf[i1] = NULL;
 if(i1 > 0) {
 inf += ' ';
 }
