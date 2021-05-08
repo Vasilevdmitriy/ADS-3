@@ -73,7 +73,7 @@ inf1.pop();
 i1 = inf.size()-1;
 while(i1 > -1) {
 inf += inf[i1];
-inf[i1] = NULL;
+inf[i1] = ' ';
 if(i1 > 0) {
 inf += ' ';
 }
