@@ -85,6 +85,9 @@ while(inf[i2] == ' '){
     inf[i2] = '\0';
     i2++;
 }
+i2 = inf.size()-1;
+
+if(inf[i2] == ' ') inf[i2] = '\0';
 
 return inf;
 }
