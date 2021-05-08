@@ -79,6 +79,13 @@ inf += ' ';
 }
 i1--;
 }
+
+int i2 = 0;
+while(inf[i2] == ' '){
+    inf[i2] = '\0';
+    i2++;
+}
+
 return inf;
 }
 
