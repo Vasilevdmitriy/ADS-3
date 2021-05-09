@@ -89,10 +89,10 @@ return inf;
 int eval(std::string pst) {
 TStack<std::string> stack1;
 int result = 0;
-std::string temp;
 int i1 = 0;
 int k1;
 int k2;
+std::string temp;
 
 while(i1 <pst.size()) {
 if((PrOp(pst[i1]) == -1) && (pst[i1+1] == ' ')) {
@@ -101,7 +101,6 @@ stack1.push(temp);
 i1 += 2;
 } else if ((PrOp(pst[i1]) == -1) && (PrOp(pst[i1+1]) == -1)) {
 temp = pst[i1]+pst[i1+1];
-//std::cout<<temp<<std::endl;
 stack1.push(temp);
 i1 +=2;
 } else if (pst[i1] == '+') {
