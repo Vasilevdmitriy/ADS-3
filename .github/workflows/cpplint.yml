@@ -9,4 +9,5 @@ jobs:
     - uses: actions/checkout@v2
     - uses: actions/setup-python@v2
     - run: pip install cpplint
-    - run: cpplint --filter=-build/include_subdir,-whitespace/comments,-runtime/arrays,-runtime/threadsafe_fn --recursive .
+    - run: cpplint --filter=-build/include_subdir,-runtime/string,-whitespace/comments,-runtime/arrays,-runtime/threadsafe_fn --recursive .
+
