@@ -80,8 +80,8 @@ inf += ' ';
 i1--;
 }
 
-while ( isspace( *inf.begin() ) ) inf.erase(0, 1);
-while ( isspace( *--inf.end() ) ) inf.erase(inf.length() - 1, 1);
+while (isspace( *inf.begin() ) ) inf.erase(0, 1);
+while (isspace( *--inf.end() ) ) inf.erase(inf.length() - 1, 1);
 
 return inf;
 }
@@ -92,6 +92,8 @@ int result = 0;
 int i1 = 0;
 int k1;
 int k2;
+int i2;
+
 std::string temp;
 
 while(i1 <pst.size()) {
@@ -105,7 +107,7 @@ stack1.push(temp);
 i1 +=2;
 } else if (pst[i1] == '+') {
 k1 = 0;
-for(int i2 = 0; i2 < 2; i2++) {
+for(i2 = 0; i2 < 2; i2++) {
 k1 += atoi(stack1.get().c_str());
 stack1.pop();
 }
@@ -125,7 +127,7 @@ stack1.push(temp);
 i1 += 2;
 } else if (pst[i1] == '*') {
 k1 = 1;
-for(int i2 = 0; i2 < 2; i2++) {
+for(i2 = 0; i2 < 2; i2++) {
 k1 *= atoi(stack1.get().c_str());
 stack1.pop();
 }
