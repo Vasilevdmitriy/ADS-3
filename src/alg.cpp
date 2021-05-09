@@ -80,18 +80,11 @@ inf += ' ';
 i1--;
 }
 
-int i2 = 0;
-while(inf[i2] == ' '){
-    inf[i2] = '\0';
-    i2++;
-}
-i2 = inf.size()-1;
-
-if(inf[i2] == ' ') inf[i2] = '\0';
+while ( isspace( *inf.begin() ) ) inf.erase(0, 1);
+while ( isspace( *--inf.end() ) ) inf.erase(inf.length() - 1, 1);
 
 return inf;
 }
-
 
 int eval(std::string pst) {
 TStack<std::string> stack1;
