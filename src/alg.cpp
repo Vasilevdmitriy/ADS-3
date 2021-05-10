@@ -80,8 +80,8 @@ inf += ' ';
 i1--;
 }
 
-while (isspace( *inf.begin() ) ) inf.erase(0, 1);
-while (isspace( *--inf.end() ) ) inf.erase(inf.length() - 1, 1);
+while (isspace(*inf.begin() ) ) inf.erase(0, 1);
+while (isspace(*--inf.end() ) ) inf.erase(inf.length() - 1, 1);
 
 return inf;
 }
